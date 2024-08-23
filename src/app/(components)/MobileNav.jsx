@@ -1,5 +1,5 @@
 "use client";
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CgMenuRight } from "react-icons/cg";
 import { FaTimes } from "react-icons/fa";
@@ -20,6 +20,11 @@ const menuVariants = {
 
 function MobileNav() {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const handleMenuClose = () => {
+    setOpenMenu(false);
+  };
+
   return (
     <nav className="text-primary xl:hidden">
       <div
@@ -36,26 +41,34 @@ function MobileNav() {
         className="bg-white shadow-2xl w-full absolute top-0 right-0 max-w-xs h-screen z-20"
       >
         <div
-          onClick={() => setOpenMenu(false)}
+          onClick={handleMenuClose}
           className="text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer"
         >
           <FaTimes />
         </div>
         <ul className="h-full flex flex-col justify-center items-center gap-y-8 text-primary font-primary font-bold text-3xl">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={handleMenuClose}>
+              Home
+            </Link>
           </li>
 
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about" onClick={handleMenuClose}>
+              About
+            </Link>
           </li>
 
           <li>
-            <Link href="/portfolio">Portfolio</Link>
+            <Link href="/portfolio" onClick={handleMenuClose}>
+              Portfolio
+            </Link>
           </li>
 
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" onClick={handleMenuClose}>
+              Contact
+            </Link>
           </li>
         </ul>
       </motion.div>
