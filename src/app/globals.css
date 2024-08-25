@@ -7,3 +7,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+@layer base {
+    body {
+      @apply overflow-hidden text-primary font-secondary bg-white;
+    }
+  
+    .h1 {
+      @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
+    }
+  
+    .section {
+      @apply h-screen w-screen;
+    }
+  
+    /* .btn {
+        @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
+    } */
+
+    .btn{
+      @apply bg-primary py-[18px] px-[50px]  rounded-[50px] text-white font-[600] mt-[38px];
+      /* Adaugă regulile pentru hover aici */
+      @apply hover:scale-105 transition-transform duration-300 ease-in-out;
+  }
+      
+  }

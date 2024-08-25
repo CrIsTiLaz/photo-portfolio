@@ -8,18 +8,24 @@ import {
   ImYoutube,
 } from "react-icons/im";
 
+import {
+  AiOutlineYoutube,
+  AiFillFacebook,
+  AiOutlineInstagram,
+} from "react-icons/ai";
+
 const socialLinks = [
   {
     path: "https://www.youtube.com/",
-    icon: <ImYoutube className="group-hover:text-white w-4 h-5" />,
+    icon: <AiOutlineYoutube className="group-hover:text-white w-4 h-5" />,
   },
   {
     path: "https://www.facebook.com",
-    icon: <ImFacebook className="group-hover:text-white w-4 h-5" />,
+    icon: <AiFillFacebook className="group-hover:text-white w-4 h-5" />,
   },
   {
     path: "https://www.instagram.com/",
-    icon: <ImInstagram className="group-hover:text-white w-4 h-5" />,
+    icon: <AiOutlineInstagram className="group-hover:text-white w-4 h-5" />,
   },
 ];
 
