@@ -9,7 +9,7 @@
 
 @layer base {
     body {
-      @apply  text-primary font-secondary bg-white;
+      @apply   text-primary font-secondary bg-white;
     }
   
     .h1 {
@@ -34,15 +34,9 @@
 
   .sticky__header{
     width: 100%;
-    height: 80px;
     /* line-height: 80px; */
     position: sticky;
-    top: 0; 
-    left: 0;
-    z-index: 99999;
-     background: white;
 
-    box-shadow: 3px 3px -8px 3px #ddd;
+
   
 }
-  

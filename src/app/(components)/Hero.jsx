@@ -1,11 +1,21 @@
-import React from "react";
-// import WomanImg from "/photograph.jpg";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function Hero() {
+  useEffect(() => {
+    // Blochează scroll-ul la încărcarea componentei
+    document.body.style.overflow = "hidden";
+
+    // Curăță efectul pentru a permite scroll-ul după ce componenta este demontată
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
-    <section className="section">
+    <section className="section overflow-hidden">
       <div className="container mx-auto h-full relative">
         <div className="flex flex-col justify-center">
           <div
@@ -25,7 +35,6 @@ function Hero() {
           </div>
 
           <div className="flex justify-end  lg:translate-x-20">
-            {/* Mutarea întregii secțiuni mai la dreapta */}
             <div className="bg-blue-100 p-4">
               <div className="lg:mr-[-150px] lg:ml-[-150px] mt-[70px] flex justify-center">
                 <Image
