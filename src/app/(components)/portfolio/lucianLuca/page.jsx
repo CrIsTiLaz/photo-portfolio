@@ -105,8 +105,14 @@ export default page;
 // lifestyle
 // nightlife
 // fitness
-//majorate
+// majorate
 
 // cand intri poe categorie sa fie ca la jigovan
 
 //carousel in landing
+
+// in header cand faci hover pe portfolio sa fie un dropdown cu categoriile
+
+//lista de servicii ca la costi
+
+//faq
