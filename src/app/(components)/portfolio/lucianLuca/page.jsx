@@ -12,7 +12,7 @@ function page() {
         justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8"
         >
           <div className="flex flex-col lg:items-start">
-            <h1 className="h1">Portfolio</h1>
+            <h1 className="h1">Sedinta foto fitness Lucian Luca</h1>
             <p className="mb-8 max-w-sm mt-4">
               Sunt Patrik, un <b>povestitor vizual</b> ce transformă fiecare
               moment prețios într-o poveste nemuritoare. Fie că este vorba
@@ -97,3 +97,16 @@ function page() {
 }
 
 export default page;
+
+// categorii
+// weding
+// baptism
+// absolventi
+// lifestyle
+// nightlife
+// fitness
+//majorate
+
+// cand intri poe categorie sa fie ca la jigovan
+
+//carousel in landing
