@@ -7,8 +7,6 @@ export default function Home() {
   return (
     <>
       <div>
-        {" "}
-        {/* Adăugat padding-top pentru spațiu suplimentar */}
         <Hero />
       </div>
     </>
