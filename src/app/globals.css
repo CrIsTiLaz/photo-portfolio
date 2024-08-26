@@ -36,6 +36,19 @@
       
   }
 
+  @layer components{
+
+    .heading{
+      @apply text-[44px] leading-[54px] font-[700] text-primary
+  }
+
+
+    .form__input{
+      @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none  
+      focus:border-[#0066ff61] text-[16px] leading-7 text-primary placeholder:text-primary cursor-pointer rounded-md;
+  }
+  }
+
   .sticky__header{
     width: 100%;
     /* line-height: 80px; */
