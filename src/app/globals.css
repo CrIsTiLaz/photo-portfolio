@@ -38,6 +38,10 @@
 
   @layer components{
 
+    .container{
+      @apply max-w-full w-[1440px] px-5 mx-auto
+  }
+
     .heading{
       @apply text-[44px] leading-[54px] font-[700] text-primary
   }

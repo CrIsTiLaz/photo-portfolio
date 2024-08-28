@@ -4,16 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 function Hero() {
-  useEffect(() => {
-    // Blochează scroll-ul la încărcarea componentei
-    document.body.style.overflow = "hidden";
-
-    // Curăță efectul pentru a permite scroll-ul după ce componenta este demontată
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
-
   return (
     <section className="section overflow-hidden">
       <div className="container mx-auto h-full relative">
