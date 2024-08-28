@@ -79,14 +79,15 @@ function Contact() {
       <div className="px-4 mx-auto max-w-screen-md pt-[150px] pb-20">
         <h2 className="heading text-center pb-10">Rezervă o sesiune foto!</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-2  gap-10 mb-10 text-center">
-          <div className="flex flex-col items-center">
-            <AiFillPhone size={40} className="mb-2 primary" />
-            <p className="text-lg">+40 067 157 646</p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-10 mb-10 text-center">
           <div className="flex flex-col items-center">
             <AiOutlineMail size={40} className="mb-2 primary" />
             <p className="text-lg">patrikstoian7@gmail.com</p>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <AiFillPhone size={40} className="mb-2 primary" />
+            <p className="text-lg">+40 067 157 646</p>
           </div>
         </div>
 
