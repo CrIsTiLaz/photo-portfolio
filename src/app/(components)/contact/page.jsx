@@ -1,31 +1,48 @@
 "use client";
+
+import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 
 function Contact() {
-  // State-uri pentru gestionarea valorilor inputurilor
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-
-  // Hook-ul pentru navigare
   const router = useRouter();
 
-  // Funcția care se apelează la trimiterea formularului
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Previne comportamentul implicit de trimitere a formularului
 
-    // Pregătește datele pentru trimitere
+    // Verifică dacă toate câmpurile sunt completate
+    if (!email || !subject || !message) {
+      Swal.fire({
+        icon: "warning",
+        title: "Toate câmpurile sunt obligatorii",
+        text: "Vă rugăm să completați toate câmpurile înainte de a trimite.",
+      });
+      return; // Oprește trimiterea formularului
+    }
+
     const formData = {
-      email,
-      subject,
-      message,
+      to: "cristilazea18@gmail.com",
+      subject: subject,
+      body: `
+        <div style="font-family: Arial, sans-serif; color: #333;">
+          <h2 style="color: #4CAF50;">Ați primit un email nou</h2>
+          <p><strong>De la:</strong> ${email}</p>
+          <p><strong>Subiect:</strong> ${subject}</p>
+          <div style="margin-top: 20px;">
+            <h3>Mesaj:</h3>
+            <p>${message}</p>
+          </div>
+        </div>
+      `,
     };
 
     try {
-      // Trimite cererea către backend
-      const response = await fetch(`/contact`, {
+      // Trimite cererea POST către API-ul de contact
+      const response = await fetch("/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,15 +50,13 @@ function Contact() {
         body: JSON.stringify(formData),
       });
 
-      // Verifică dacă cererea a avut succes
       if (response.ok) {
         Swal.fire({
           icon: "success",
           title: "Mesaj trimis!",
           text: "Mesajul a fost trimis cu succes.",
-        }).then(() => {
-          router.push("/");
         });
+        router.push("/");
       } else {
         Swal.fire({
           icon: "error",
@@ -50,7 +65,7 @@ function Contact() {
         });
       }
     } catch (error) {
-      console.error("Eroare la trimiterea formularului:", error);
+      console.error("Error:", error);
       Swal.fire({
         icon: "error",
         title: "Eroare",
@@ -61,13 +76,19 @@ function Contact() {
 
   return (
     <section>
-      <div className="px-4 mx-auto max-w-screen-md pt-[150px] pb-16">
-        <h2 className="heading text-center pb-10">Contactați-ne</h2>
+      <div className="px-4 mx-auto max-w-screen-md pt-[150px] pb-20">
+        <h2 className="heading text-center pb-10">Rezervă o sesiune foto!</h2>
 
-        <p className="mb-8 lg:mb-16 font-light text-center text__para">
-          Aveți o problemă tehnică? Doriți să trimiteți feedback despre o
-          funcție beta?
-        </p>
+        <div className="grid grid-cols-2 md:grid-cols-2  gap-10 mb-10 text-center">
+          <div className="flex flex-col items-center">
+            <AiFillPhone size={40} className="mb-2 primary" />
+            <p className="text-lg">+40 067 157 646</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <AiOutlineMail size={40} className="mb-2 primary" />
+            <p className="text-lg">patrikstoian7@gmail.com</p>
+          </div>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-8">
           <div>
@@ -112,7 +133,7 @@ function Contact() {
             />
           </div>
 
-          <button type="submit" className="btn sm:w-fit ">
+          <button type="submit" className="btn sm:w-fit">
             Trimite
           </button>
         </form>

@@ -1,0 +1,33 @@
+Lista paginilor:
+Homepage
+Contact
+Portfolio
+
+Lista componentelor ce trebuie facute:
+
+-Homepage
+    Header
+    Hero    
+    About
+    Faq
+    Testimonial
+    Lista servicii
+    Footer
+    
+-Contact
+    Formular contact cu serviciu ca sa trimita emailuri
+    
+-Portfolio
+    La portfolio sa fie 7 categorii, fiecare categorie avand un demo de poze,
+    urmand ca fiecare demo daca este apasat sa se deschida intro pagina noua 
+    ce contine mai multe poze din categoria respectiva
+
+Cerinte extra:
+    In hero trebuie sa fie un carousel de poze de calitate
+    In header la sectiunea de portfolio sa fie un dropdown cu categoriile
+    care contine linkuri directe catre paginile cu poze din categoria apasata
+
+Cerinte non functionale:
+performance
+seo
+responsive
