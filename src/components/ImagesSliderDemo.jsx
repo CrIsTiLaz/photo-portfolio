@@ -11,7 +11,7 @@ export function ImagesSliderDemo() {
     "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
   return (
-    <ImagesSlider className="h-[50rem]" images={images}>
+    <ImagesSlider className="h-[100vh]" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -26,9 +26,10 @@ export function ImagesSliderDemo() {
         }}
         className="z-50 flex flex-col justify-start "
       >
-        <motion.p className="font-bold text-xl md:text-6xl text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+        <motion.p className="font-bold text-4xl md:text-5xl lg:text-6xl text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           Fotograf & <br /> povestitor vizual
         </motion.p>
+
         <Link className="justify-center text-center" href={"/contact"}>
           <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
             <span>Contact →</span>

@@ -9,6 +9,7 @@ const nextConfig = {
       "api.microlink.io",
       "images.unsplash.com",
       "assets.aceternity.com", // Microlink Image Preview
+      "res.cloudinary.com",
     ],
   },
 };

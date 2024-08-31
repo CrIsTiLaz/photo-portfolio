@@ -1,0 +1,26 @@
+Poze pentru hero section (sectiunea de imediat de sub header de pe peagina principala, 
+cea cu pozele mari, unde scrie pe site Fotograf & povestitor vizual)
+
+Text pentru sectiunea de servicii, unde sunt cele 3 pachete de servicii
+
+Texte pentru testimoniale, cu tot cu numele autorului (cat mai multe daca gasesti)
+
+Text pentru sectiunea de about
+
+Poze pentru categoriile stabilite impreuna ce vor aparea pe site: 
+- weding
+- baptism
+- absolventi
+- lifestyle
+- nightlife
+- fitness
+- majorate
+
+** Mentiuni
+
+Dimensiunea pozelor poate fi de 10 MB, dar daca ai poze ce depasesc dimeniunea asta se pot comprima
+intrun format modern care le pastreaza calitatea(AVIF)
+
+Trebuie sa iti faci cont pe cloudinary (https://cloudinary.com/users/register_free) cu adresa de email
+(nu sigup cu google sau github) si apoi sa imi zici parola pentru a incarca pozele, sau le poti incarca chiar tu
+doar ca apoi trebuie sa imi zici linkul catre fiecare poza

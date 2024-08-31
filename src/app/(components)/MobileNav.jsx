@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoSettingsOutline } from "react-icons/io5";
-import { CgMenuRight } from "react-icons/cg";
+import { CgMenuRightAlt } from "react-icons/cg";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -20,18 +20,34 @@ const menuVariants = {
 
 function MobileNav() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMenuClose = () => {
     setOpenMenu(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <nav className="text-primary xl:hidden">
       <div
         onClick={() => setOpenMenu(true)}
-        className="text-3xl cursor-pointer"
+        className={`text-3xl cursor-pointer ${
+          isScrolled ? "text-black" : "text-white"
+        }`}
       >
-        <CgMenuRight />
+        <CgMenuRightAlt />
       </div>
 
       <motion.div

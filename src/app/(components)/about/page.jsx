@@ -11,7 +11,12 @@ function Page() {
           items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16"
         >
           <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
-            <Image src="/man.png" alt="man" width={1000} height={1000} />
+            <Image
+              src="https://res.cloudinary.com/dnbooicju/image/upload/v1725133263/Patrik_x3dg0z.jpg"
+              alt="man"
+              width={1000}
+              height={1000}
+            />
           </div>
           <div className="flex-1 pt-36 pb-14 lg:pt-5 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
             <h1 className="h1">About me</h1>
