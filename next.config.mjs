@@ -3,6 +3,13 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  reactStrictMode: false, // Aceasta opțiune trebuie să fie parte a obiectului nextConfig
+  reactStrictMode: false,
+  images: {
+    domains: [
+      "api.microlink.io",
+      "images.unsplash.com",
+      "assets.aceternity.com", // Microlink Image Preview
+    ],
+  },
 };
 export default nextConfig;

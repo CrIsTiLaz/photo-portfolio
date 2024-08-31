@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import Hero from "./(components)/home/Hero";
 import Services from "./(components)/home/Services";
 import { InfiniteMovingCardsDemo } from "@/components/InfiniteMovingCards";
+import { ImagesSliderDemo } from "@/components/ImagesSliderDemo";
 
 export default function Home() {
   return (
     <>
       <div>
-        <Hero />
+        <ImagesSliderDemo />
         <Services />
         <InfiniteMovingCardsDemo />
       </div>

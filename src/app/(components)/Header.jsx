@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Socials from "./Socials";
 import MobileNav from "./MobileNav";
-import Image from "next/image";
 import Link from "next/link";
 
 function Header() {
@@ -23,41 +22,31 @@ function Header() {
 
   return (
     <header
-      className={`fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[130px] flex items-center transition-colors duration-500 ${
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      className={`fixed w-full px-[30px] lg:px-[100px] z-50 h-[40px] lg:h-[100px] flex items-center transition-colors duration-500 ${
+        isScrolled
+          ? "bg-white/30 backdrop-blur-md text-primary shadow-md"
+          : "bg-transparent text-white"
       }`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         <Link href="/" className="max-w-[200px]">
-          <Image src="/next.svg" alt="Logo" width={90} height={90} />
+          Patrik
         </Link>
 
         <nav className="hidden lg:flex gap-x-12 font-semibold">
-          <Link
-            href="/"
-            className="text-[#696c6d] hover:text-primary transition"
-          >
+          <Link href="/" className="hover:text-primary transition">
             Home
           </Link>
 
-          <Link
-            href="/about"
-            className="text-[#696c6d] hover:text-primary transition"
-          >
+          <Link href="/about" className="hover:text-primary transition">
             About
           </Link>
 
-          <Link
-            href="/portfolio"
-            className="text-[#696c6d] hover:text-primary transition"
-          >
+          <Link href="/portfolio" className="hover:text-primary transition">
             Portfolio
           </Link>
 
-          <Link
-            href="/contact"
-            className="text-[#696c6d] hover:text-primary transition"
-          >
+          <Link href="/contact" className="hover:text-primary transition">
             Contact
           </Link>
         </nav>
