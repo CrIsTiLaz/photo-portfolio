@@ -28,6 +28,6 @@ Cerinte extra:
     care contine linkuri directe catre paginile cu poze din categoria apasata
 
 Cerinte non functionale:
-performance
-seo
-responsive
+performance(siteul trebuie sa se miste smooth si incarcarea sa fie una rapida)
+seo(siteul trebuie sa apara in topul cautarilor pe google)
+responsive( trebuie sa arate bine atat pe dispozitive mobile cat si desktop)
