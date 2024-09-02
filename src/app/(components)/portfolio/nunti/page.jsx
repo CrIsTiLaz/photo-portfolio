@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { ParallaxScrollDemo } from "@/components/ParallaxScrollDemo";
 
 function page() {
   return (
-    <section className="section">
-      <div className="container mx-auto h-full relative">
+    <section className="section ">
+      {/* <div className="container mx-auto h-full relative">
         <div
           className="flex flex-col lg:flex-row h-full items-center 
           justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8"
@@ -85,7 +86,9 @@ function page() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <ParallaxScrollDemo />
     </section>
   );
 }
