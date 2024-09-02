@@ -6,6 +6,7 @@ import Services from "./(components)/home/Services";
 import { InfiniteMovingCardsDemo } from "@/components/InfiniteMovingCards";
 import { InfiniteMovingCardsDemoLeft } from "@/components/InfiniteMovingCardsLeft";
 import { ImagesSliderDemo } from "@/components/ImagesSliderDemo";
+import { FeaturesSectionDemo } from "@/components/ui/gradient-card";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Services />
 
         <InfiniteMovingCardsDemoLeft />
+        <FeaturesSectionDemo />
       </div>
     </>
   );
