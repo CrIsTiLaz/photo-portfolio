@@ -2,29 +2,33 @@ import React from "react";
 import { useId } from "react";
 import { AiFillCheckCircle } from "react-icons/ai";
 
-export function FeaturesSectionDemo() {
+export function Oferte() {
   return (
-    <div className="py-20 lg:py-40">
-      <div className="grid grid-cols-1 lg:gap-5 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-        {grid.map((feature) => (
-          <div
-            key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
-          >
-            <Grid size={20} />
-            <p className="text-base text-center pt-7 font-bold text-neutral-800 dark:text-white relative z-20">
-              {feature.title}
-            </p>
-            <ul className="text-neutral-600 dark:text-neutral-400 mt-10 text-base font-normal relative z-20">
-              {feature.services.map((service, index) => (
-                <li key={index} className="flex items-start mb-7">
-                  <AiFillCheckCircle className="text-2xl mr-3 mt-1" />
-                  <span className="text-left flex-1">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <div>
+      <h1 className="h2 text-center mt-28 ">Oferte disponibile</h1>
+
+      <div className="py-16 lg:py-24">
+        <div className="grid grid-cols-1 lg:gap-5 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          {grid.map((feature) => (
+            <div
+              key={feature.title}
+              className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
+            >
+              <Grid size={20} />
+              <p className="text-base text-center pt-7 font-bold text-neutral-800 dark:text-white relative z-20">
+                {feature.title}
+              </p>
+              <ul className="text-neutral-600 dark:text-neutral-400 mt-10 text-base font-normal relative z-20">
+                {feature.services.map((service, index) => (
+                  <li key={index} className="flex items-start mb-7">
+                    <AiFillCheckCircle className="text-2xl mr-3 mt-1" />
+                    <span className="text-left flex-1">{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

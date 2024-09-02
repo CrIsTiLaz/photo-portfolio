@@ -1,18 +1,26 @@
 "use client";
 
 import React from "react";
-import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
+import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
-export function InfiniteMovingCardsDemoLeft() {
+export function Testimonial() {
   return (
-    <div className=" h-[40rem] gap-10 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+    <div>
+      <h1 className="h2 text-center mt-28 mb-12">Testimoniale</h1>
 
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
+      <div className=" h-[40rem] gap-10 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="left"
+          speed="slow"
+        />
+
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="slow"
+        />
+      </div>
     </div>
   );
 }

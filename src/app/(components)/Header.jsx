@@ -38,10 +38,6 @@ function Header() {
             Home
           </Link>
 
-          <Link href="/about" className="hover:text-primary transition">
-            About
-          </Link>
-
           <Link href="/portfolio" className="hover:text-primary transition">
             Portfolio
           </Link>
