@@ -25,7 +25,7 @@ function Header() {
       className={`fixed w-full px-[30px] lg:px-[100px] z-50 h-[40px] lg:h-[100px] flex items-center transition-colors duration-500 ${
         isScrolled
           ? "bg-white/30 backdrop-blur-md text-primary shadow-md"
-          : "bg-transparent text-white"
+          : "bg-transparent "
       }`}
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">

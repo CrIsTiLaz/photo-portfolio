@@ -2,14 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { BentoGridSecondDemo } from "@/components/PortfolioGrid";
 
 function page() {
   return (
-    <section className="section ">
-      <div className="container mx-auto h-full relative">
+    <section>
+      {/* <div className="container mx-auto h-full relative max-w-7xl">
         <div
           className="flex flex-col lg:flex-row h-full items-center 
-        justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8"
+        justify-start gap-x-24 text-center lg:text-left pt-24 lg:pt-36 pb-8 "
         >
           <div className="flex flex-col lg:items-start">
             <h1 className="h2">Fitness</h1>
@@ -176,6 +177,10 @@ function page() {
             </div>
           </div>
         </div>
+      </div> */}
+      <div className="pt-36 pb-36 ">
+        {/* Componenta BentoGridSecondDemo */}
+        <BentoGridSecondDemo />
       </div>
     </section>
   );
