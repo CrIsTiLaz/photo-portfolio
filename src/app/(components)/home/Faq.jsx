@@ -21,7 +21,7 @@ const faqData = [
 
 function Faq() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4">
       <h1 className="h2 text-center mb-16">Întrebări frecvente</h1>
 
       <Accordion type="single" collapsible>

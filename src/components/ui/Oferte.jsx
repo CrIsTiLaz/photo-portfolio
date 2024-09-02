@@ -1,38 +1,71 @@
+"use client";
 import React from "react";
-import { useId } from "react";
+import { BackgroundGradient } from "../ui/background-gradient";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { useId } from "react";
 
 export function Oferte() {
   return (
-    <div>
-      <h1 className="h2 text-center mt-28 ">Oferte disponibile</h1>
-
-      <div className="py-16 lg:py-24">
-        <div className="grid grid-cols-1 lg:gap-5 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-          {grid.map((feature) => (
-            <div
-              key={feature.title}
-              className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-6 rounded-3xl overflow-hidden"
-            >
-              <Grid size={20} />
-              <p className="text-base text-center pt-7 font-bold text-neutral-800 dark:text-white relative z-20">
-                {feature.title}
-              </p>
-              <ul className="text-neutral-600 dark:text-neutral-400 mt-10 text-base font-normal relative z-20">
-                {feature.services.map((service, index) => (
-                  <li key={index} className="flex items-start mb-7">
-                    <AiFillCheckCircle className="text-2xl mr-3 mt-1" />
-                    <span className="text-left flex-1">{service}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+    <div className="min-h-screen dark:bg-gray-900 py-16 lg:py-24 px-4">
+      <h1 className="h2 text-center mb-24">Oferte disponibile</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {grid.map((feature, featureIndex) => (
+          <div key={featureIndex} className="relative">
+            {feature.title === "Pachetul 2" && (
+              // Boxul galben cu textul "Popular"
+              <div className="absolute ml-9 mt-2 top-4 bg-yellow-400 text-white px-3 py-1 rounded-3xl z-50">
+                Popular
+              </div>
+            )}
+            {feature.title === "Pachetul 2" ? (
+              <BackgroundGradient
+                key={feature.title}
+                className="rounded-[22px] bg-white dark:bg-zinc-900"
+              >
+                <div className="relative p-6 rounded-3xl overflow-hidden bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white">
+                  <Grid size={20} />
+                  <p className="text-base text-center font-bold text-neutral-800 dark:text-white relative z-10">
+                    {feature.title}
+                  </p>
+                  <ul className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-10">
+                    {feature.services.map((service, index) => (
+                      <li
+                        key={`${feature.title}-${index}`} // Cheia trebuie să fie unică
+                        className="flex items-start mb-4"
+                      >
+                        <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                        <span className="text-left flex-1">{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </BackgroundGradient>
+            ) : (
+              <div className="relative p-6 rounded-3xl overflow-hidden bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white">
+                <Grid size={20} />
+                <p className="text-base text-center font-bold text-neutral-800 dark:text-white relative z-10">
+                  {feature.title}
+                </p>
+                <ul className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-10">
+                  {feature.services.map((service, index) => (
+                    <li
+                      key={`${feature.title}-${index}`} // Cheia trebuie să fie unică
+                      className="flex items-start mb-4"
+                    >
+                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                      <span className="text-left flex-1">{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
+
 const grid = [
   {
     title: "Pachetul 1",

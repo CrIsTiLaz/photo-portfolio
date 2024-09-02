@@ -6,6 +6,8 @@ import Services from "./(components)/home/Services";
 import { InfiniteMovingCardsDemo } from "@/components/InfiniteMovingCards";
 import { Testimonial } from "@/components/Testimonial";
 import { ImagesSliderDemo } from "@/components/ImagesSliderDemo";
+import { BackgroundGradientDemo } from "@/components/BackgroundGradient";
+import { HoverBorderGradientDemo } from "@/components/HoverBorder";
 import { Oferte } from "@/components/ui/Oferte";
 import About from "./(components)/about/About";
 import Faq from "./(components)/home/Faq";

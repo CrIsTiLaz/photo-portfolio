@@ -14,12 +14,14 @@ function About() {
             className="flex flex-col lg:flex-row h-full 
             items-start justify-center gap-x-24 lg:text-left mt-0"
           >
-            <div className="rounded-3xl flex-1 max-h-100 lg:max-h-max order-2 lg:order-none overflow-hidden">
+            <div className="rounded-3xl flex-1 order-2 lg:order-none overflow-hidden">
               <Image
                 src="https://res.cloudinary.com/dnbooicju/image/upload/v1725133263/Patrik_x3dg0z.jpg"
                 alt="man"
+                layout="responsive"
                 width={1000}
                 height={1000}
+                className="w-full h-auto object-cover"
               />
             </div>
             <div className="flex-1 pb-14 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
