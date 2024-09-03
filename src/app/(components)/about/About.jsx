@@ -4,7 +4,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="section">
+    <section className="section mb-16">
       <div className="container mx-auto h-full relative max-w-full lg:max-w-7xl">
         {/* Titlul "About me" deasupra imaginii și textului */}
         <div className="mt-20 ">
