@@ -14,7 +14,7 @@ function About() {
             className="flex flex-col lg:flex-row h-full 
             items-start justify-center gap-x-24 lg:text-left mt-0 "
           >
-            <div className="rounded-3xl flex-1 order-2 lg:order-none overflow-hidden mb-10 ">
+            <div className="rounded-3xl flex-1 order-2 lg:order-none overflow-hidden mb-20 ">
               <Image
                 src="https://res.cloudinary.com/dnbooicju/image/upload/v1725133263/Patrik_x3dg0z.jpg"
                 alt="man"
