@@ -10,26 +10,26 @@ import {
 const socialLinks = [
   {
     path: "https://www.youtube.com/",
-    icon: <AiOutlineYoutube className="group-hover:text-white w-4 h-5" />,
+    icon: <AiOutlineYoutube className="group-hover:text-white w-6 h-6" />,
   },
   {
     path: "https://www.facebook.com",
-    icon: <AiFillFacebook className="group-hover:text-white w-4 h-5" />,
+    icon: <AiFillFacebook className="group-hover:text-white w-6 h-6" />,
   },
   {
     path: "https://www.instagram.com/",
-    icon: <AiOutlineInstagram className="group-hover:text-white w-4 h-5" />,
+    icon: <AiOutlineInstagram className="group-hover:text-white w-6 h-6" />,
   },
 ];
 
 const quickLinks01 = [
   {
     path: "/",
-    display: "Acasă",
+    display: "Home",
   },
   {
-    path: "/clinics",
-    display: "Cabinete",
+    path: "/portfolio",
+    display: "Portfolio",
   },
   {
     path: "/contact",
@@ -44,11 +44,11 @@ const quickLinks02 = [
   },
   {
     path: "/clinic-register",
-    display: "Creez cont pentru clinica",
+    display: "Creez cont pentru clinică",
   },
   {
     path: "/login",
-    display: "Ma conectez",
+    display: "Mă conectez",
   },
 ];
 
@@ -62,27 +62,29 @@ const quickLinks03 = [
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="pb-16 pt-10">
-      <div className="container">
-        <div className="flex justify-between flex-col md:flex-row flex-wrap gap-[30px]">
-          <div>
-            <h1>P.S</h1>
-            <p className="text-[16px] leading-7 font-[400] text-textColor mt-4">
-              Copyright © {year} Patrik Stoian. Toate drepturile rezervate
+    <footer className=" text-primary py-12">
+      <div className="container mx-auto px-4 lg:px-16">
+        <div className="flex justify-between flex-col md:flex-row flex-wrap gap-8">
+          {/* Logo and Copyright */}
+          <div className="flex flex-col space-y-4">
+            <h1 className="text-3xl font-bold">P.S</h1>
+            <p className="text-sm leading-7 font-light text-neutral-600">
+              Copyright © {year} Patrik Stoian <br />
+              Made by Cristian Lazea
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
+            <h2 className="text-xl font-semibold mb-4 text-neutral-600">
               Linkuri rapide
             </h2>
-
-            <ul>
+            <ul className="space-y-2">
               {quickLinks01.map((link, index) => (
-                <li key={index} className="mb-4">
+                <li key={index}>
                   <Link
                     href={link.path}
-                    className="text-[16px] leading-7 font-[400] text-textColor hover:text-primaryColor"
+                    className="text-sm leading-7 font-light text-neutral-600 hover:text-primary transition duration-300"
                   >
                     {link.display}
                   </Link>
@@ -91,42 +93,22 @@ function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
-              Vreau sa:
+          {/* Social Links */}
+          <div className="flex flex-col space-y-4">
+            <h2 className="text-xl font-semibold mb-4 text-neutral-600">
+              Urmărește-mă
             </h2>
-
-            <ul>
-              {quickLinks02.map((link, index) => (
-                <li key={index} className="mb-4">
-                  <Link
-                    href={link.path}
-                    className="text-[16px] leading-7 font-[400] text-textColor hover:text-primaryColor"
-                  >
-                    {link.display}
-                  </Link>
-                </li>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.path}
+                  className="text-neutral-600 hover:text-primary transition duration-300"
+                >
+                  {social.icon}
+                </Link>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-[20px] leading-[30px] font-[700] mb-6 text-headingColor">
-              Suport
-            </h2>
-
-            <ul>
-              {quickLinks03.map((link, index) => (
-                <li key={index} className="mb-4">
-                  <Link
-                    href={link.path}
-                    className="text-[16px] leading-7 font-[400] text-textColor hover:text-primaryColor"
-                  >
-                    {link.display}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -135,7 +117,3 @@ function Footer() {
 }
 
 export default Footer;
-
-{
-  /* <h1 style={{ fontWeight: 'bold', marginTop: '0', fontSize: '25px' }}>SmileSeek</h1> */
-}
