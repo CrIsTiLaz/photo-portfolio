@@ -1,10 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { IoSettingsOutline } from "react-icons/io5";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { AiFillCaretDown } from "react-icons/ai";
 
 const menuVariants = {
   hidden: {
@@ -20,10 +27,15 @@ const menuVariants = {
 
 function MobileNav() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMenuClose = () => {
     setOpenMenu(false);
+  };
+
+  const handleDropdownOpenChange = (open) => {
+    setDropdownOpen(open);
   };
 
   useEffect(() => {
@@ -43,9 +55,7 @@ function MobileNav() {
     <nav className="text-primary xl:hidden">
       <div
         onClick={() => setOpenMenu(true)}
-        className={`text-3xl cursor-pointer ${
-          isScrolled ? "text-black" : "text-white"
-        }`}
+        className={`text-3xl cursor-pointer `}
       >
         <CgMenuRightAlt />
       </div>
@@ -58,11 +68,11 @@ function MobileNav() {
       >
         <div
           onClick={handleMenuClose}
-          className="text-4xl absolute z-30 left-4 top-14 text-primary cursor-pointer"
+          className="text-4xl absolute z-30 left-4 top-6 text-primary cursor-pointer"
         >
           <FaTimes />
         </div>
-        <ul className="h-full flex flex-col justify-center items-center gap-y-8 text-primary font-primary font-bold text-3xl">
+        <ul className="h-full flex flex-col pt-36 items-center gap-y-16 text-primary font-primary font-bold text-3xl">
           <li>
             <Link href="/" onClick={handleMenuClose}>
               Home
@@ -70,15 +80,60 @@ function MobileNav() {
           </li>
 
           <li>
-            <Link href="/about" onClick={handleMenuClose}>
-              About
-            </Link>
-          </li>
+            <DropdownMenu onOpenChange={handleDropdownOpenChange}>
+              <DropdownMenuTrigger className="cursor-pointer flex items-center">
+                Portfolio
+                <AiFillCaretDown
+                  className={`ml-1 transition-transform duration-200 ${
+                    dropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </DropdownMenuTrigger>
 
-          <li>
-            <Link href="/portfolio" onClick={handleMenuClose}>
-              Portfolio
-            </Link>
+              <DropdownMenuContent className={"font-primary"}>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/nunti" onClick={handleMenuClose}>
+                    Wedding
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/nunti" onClick={handleMenuClose}>
+                    Baptism
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
+                    Absolventi
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
+                    Lifestyle
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
+                    Nightlife
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
+                    Fitness
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
+                    Majorate
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="font-bold">
+                  <Link href="/portfolio" onClick={handleMenuClose}>
+                    Toate categoriile
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </li>
 
           <li>
