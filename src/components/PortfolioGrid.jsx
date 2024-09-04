@@ -37,8 +37,8 @@ const items = [
       <Image
         src="/nunta/nunta1.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Dawn of Innovation"
-        width={400}
-        height={200}
+        width={300}
+        height={300}
         className="object-cover w-full h-full rounded-xl"
       />
     ),

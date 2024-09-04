@@ -2,12 +2,13 @@ import { cn } from "@/lib/utils";
 import Link from "next/link"; // Import Link for navigation
 import { Button, buttonVariants } from "@/components/ui/button";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Image from "next/image";
 
 export const BentoGrid = ({ className, children }) => {
   return (
     <div
       className={cn(
-        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
         className
       )}
     >
@@ -24,24 +25,23 @@ export const BentoGridItem = ({ className, title, header, icon }) => {
         className
       )}
     >
-      {header}
+      <div className="relative w-full h-full overflow-hidden rounded-t-xl">
+        <Image
+          src={header.props.src}
+          alt="Header"
+          layout="fill"
+          objectFit="cover"
+          className="absolute inset-0"
+        />
+      </div>
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         {icon}
         <div className="flex items-center justify-between mt-2 mb-2">
           <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200">
             {title}
           </div>
-          {/* <Link
-            className={`bg-black text-white hover:bg-gray-800 rounded-md px-4 py-2 transition duration-300 ${buttonVariants(
-              { variant: "outline" }
-            )}`}
-            href={"/contact"}
-          >
-            Vezi mai multe <AiOutlineArrowRight />
-          </Link> */}
           <Link href={"/portfolio/nunti"}>
             <Button>
-              {" "}
               Vezi mai multe{" "}
               <AiOutlineArrowRight color="white" className="ml-2" />
             </Button>
