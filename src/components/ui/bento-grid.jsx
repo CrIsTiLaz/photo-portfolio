@@ -25,7 +25,7 @@ export const BentoGridItem = ({ className, title, header, icon }) => {
         className
       )}
     >
-      <div className="relative w-full h-full overflow-hidden rounded-t-xl">
+      <div className="relative w-full h-48 lg:h-full overflow-hidden rounded-t-xl">
         <Image
           src={header.props.src}
           alt="Header"
