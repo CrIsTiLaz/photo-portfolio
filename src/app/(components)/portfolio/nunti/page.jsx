@@ -3,10 +3,11 @@ import Link from "next/link";
 import React from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { ParallaxScrollDemo } from "@/components/ParallaxScrollDemo";
+import { LayoutGridDemo } from "@/components/LayoutGridDemo";
 
 function page() {
   return (
-    <section className="section ">
+    <section className="section mb-24">
       {/* <div className="container mx-auto h-full relative">
         <div
           className="flex flex-col lg:flex-row h-full items-center 
@@ -88,7 +89,7 @@ function page() {
         </div>
       </div> */}
 
-      <ParallaxScrollDemo />
+      <LayoutGridDemo />
     </section>
   );
 }

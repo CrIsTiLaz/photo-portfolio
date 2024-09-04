@@ -36,7 +36,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed w-full px-4 lg:px-16 z-50 h-[40px] lg:h-[100px] flex items-center transition-colors duration-500 ${
+      className={`fixed w-full px-4 lg:px-16 z-50 h-[60px] lg:h-[90px] flex items-center transition-colors duration-500 ${
         isScrolled
           ? "bg-white/30 backdrop-blur-md text-primary shadow-md"
           : "bg-transparent"
