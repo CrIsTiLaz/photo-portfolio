@@ -28,31 +28,32 @@ export function Testimonial() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "“Am colaborat cu Patrik pentru un proiect foto-video și am fost extrem de mulțumit de rezultat. Profesionalismul și creativitatea au transformat fiecare moment într-o operă de artă, capturând emoțiile și detaliile într-un mod impecabil. Procesul de lucru a fost eficient, iar comunicarea excelentă pe toată durata proiectului. Recomand cu încredere pentru oricine caută servicii de top!”",
+    name: "Sebastian Lupu",
+    title: "Frizer",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "“Calitatea excepțională a fotografiilor și designul au transformat fiecare pagină a albumului într-o amintire de neuitat. Este impecabil, iar detaliile reflectă munca depusă în folosul amintirilor noastre. Îl voi păstra mereu cu drag și voi retrăi cu emoție fiecare clipă de fiecare dată când îl voi răsfoi!”",
+    name: "Stefania",
+    title: "Absolventa",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "“Patrik a fost întotdeauna fotograful nostru de încredere, în special când ne-a făcut albumele minunate din clasa a 12-a. Fiecare proiect la care am lucrat împreună a fost o experiență grozavă, iar rezultatele au fost mereu peste așteptări. Recomand cu toata increderea !”",
+    name: "Horatiu",
+    title: "Absolvent",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "“Patrik este un fotograf pe care îl voi recomanda întotdeauna cu plăcere. Atât experiența și talentul cât și căldura și promptitudinea cu care lucrează cu clientii îl fac un fotograf deosebit”",
+    name: "Irina",
+    title: "Majorat",
+  },
+  {
+    quote:
+      "“Am avut o experiență extraordinară cu Patrik pentru pozele de album din clasa a 12-a. A reușit să surprindă momente speciale și ne-a făcut să ne simțim foarte confortabil în fața camerei. Profesionalismul și creativitatea lui au depășit așteptările noastre. Suntem extrem de mulțumiți de rezultat și recomandăm cu căldură serviciile lui. Mulțumim, Patrik, pentru amintirile frumoase pe care ni le-ai oferit!”",
+    name: "Stefania",
+    title: "Absolventa",
   },
 ];

@@ -7,7 +7,11 @@ import { useId } from "react";
 export function Oferte() {
   return (
     <div className="min-h-screen dark:bg-gray-900 py-16 lg:py-24 px-4">
-      <h1 className="h2 text-center mb-24">Oferte disponibile</h1>
+      <h1 className="h2 text-center mb-4">Oferte disponibile</h1>
+      <p className="text-center text-neutral-600 dark:text-neutral-400 mb-12">
+        Valabil pentru 2024-2025
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {grid.map((feature, featureIndex) => (
           <div key={featureIndex} className="relative">
@@ -24,8 +28,11 @@ export function Oferte() {
               >
                 <div className="relative p-6 rounded-3xl overflow-hidden bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white">
                   <Grid size={20} />
-                  <p className="text-base text-center font-bold text-neutral-800 dark:text-white relative z-10">
+                  <p className="text-xl text-center font-bold text-neutral-800 dark:text-white relative z-10">
                     {feature.title}
+                  </p>
+                  <p className="text-lg text-center font-bold text-neutral-600 dark:text-neutral-400 mt-2 relative z-10">
+                    {feature.price}
                   </p>
                   <ul className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-10">
                     {feature.services.map((service, index) => (
@@ -37,14 +44,41 @@ export function Oferte() {
                         <span className="text-left flex-1">{service}</span>
                       </li>
                     ))}
+                    <li className="mt-4 font-bold">
+                      Servicii extra disponibile:
+                    </li>
+
+                    <li className="flex items-start mb-4">
+                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                      <span className="text-left flex-1">
+                        Cununie civilă - 400 euro
+                      </span>
+                    </li>
+
+                    <li className="flex items-start mb-4">
+                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                      <span className="text-left flex-1">
+                        Second shooter - 300 euro
+                      </span>
+                    </li>
+
+                    <li className="flex items-start mb-4">
+                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                      <span className="text-left flex-1">
+                        Albume foto - preț la cerere
+                      </span>
+                    </li>
                   </ul>
                 </div>
               </BackgroundGradient>
             ) : (
               <div className="relative p-6 rounded-3xl overflow-hidden bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white">
                 <Grid size={20} />
-                <p className="text-base text-center font-bold text-neutral-800 dark:text-white relative z-10">
+                <p className="text-xl text-center font-bold text-neutral-800 dark:text-white relative z-10">
                   {feature.title}
+                </p>
+                <p className="text-lg text-center font-bold text-neutral-600 dark:text-neutral-400 mt-2 relative z-10">
+                  {feature.price}
                 </p>
                 <ul className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-10">
                   {feature.services.map((service, index) => (
@@ -56,12 +90,41 @@ export function Oferte() {
                       <span className="text-left flex-1">{service}</span>
                     </li>
                   ))}
+
+                  <li className="mt-4 font-bold">
+                    Servicii extra disponibile:
+                  </li>
+
+                  <li className="flex items-start mb-4">
+                    <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                    <span className="text-left flex-1">
+                      Cununie civilă - 400 euro
+                    </span>
+                  </li>
+
+                  <li className="flex items-start mb-4">
+                    <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                    <span className="text-left flex-1">
+                      Second shooter - 300 euro
+                    </span>
+                  </li>
+
+                  <li className="flex items-start mb-4">
+                    <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
+                    <span className="text-left flex-1">
+                      Albume foto - preț la cerere
+                    </span>
+                  </li>
                 </ul>
               </div>
             )}
           </div>
         ))}
       </div>
+      <p className="text-left  px-4 lg:px-24  text-neutral-600 dark:text-neutral-400 mt-8">
+        * Prețurile afișate nu includ costuri suplimentare de transport sau
+        cazare, care vor fi acoperite de dvs.
+      </p>
     </div>
   );
 }
@@ -69,31 +132,28 @@ export function Oferte() {
 const grid = [
   {
     title: "Pachetul 1",
+    price: "800€",
     services: [
-      " Data Encryption",
-      " Secure Access Controls",
-      " Regular Security Audits",
-      " Compliance Monitoring",
-      " 24/7 Support",
+      " Prezența unui fotograf alături de voi pe toată durata evenimentului, surprinzând cele mai frumoase momente de la cununia civilă, pregătirea mirilor, cununia religioasă, cat si petrecerea de la sala de evenimente, inclusiv după sosirea tortului.",
+      " Veti primi minim 700 de fotografii editate profesional (numărul poate crește in funcție de dinamica evenimentului), disponibile spre descărcare la calitate maxima.",
+      " Din punct de vedere al fotografiilor, nunta va fi documentată, nu regizată. ",
+      " Same day edit a 20 cadre, pentru a te putea bucura de un mic rezumat al celei mai speciale zile din viata voastră. ",
     ],
   },
   {
     title: "Pachetul 2",
+    price: "1100€",
     services: [
-      " Veți primi minim 800 de fotografii editate profesional (înfuncție de dinamica evenimentului, numărul acestora poate crește)",
-      " Nunta va fi documentată, nu regizată, din punct de vedere al fotografiilor",
-      " Vom fi alături de voi pe toată durata evenimentului și vom surprinde cele mai frumoase momente de la pregătirea mirilor, cununia civilă și religioasă, cât și petrecerea de la restaurant, până la sosirea tortului.",
-      "  În funcție de eveniment, dar contracost, vă recomandăm să optați și pentru prezența celui de-al doilea fotograf din echipa noastră pentru o experiență completă. Contactează-ne",
+      " Include tot ce include pachetul 1.",
+      ' Ședință foto "Save the date", stabilită de comun acord la rezervarea pachetului. ',
     ],
   },
   {
     title: "Pachetul 3",
+    price: "1300€",
     services: [
-      " Detailed Analytics Reports",
-      " Engagement Metrics",
-      " ROI Calculation",
-      " Customizable Dashboards",
-      " Trend Analysis",
+      " Include tot ce include pachetul 2. ",
+      ' Ședință foto "Trash the dress", care se va face după eveniment, într-o locație diferita de locația petrecerii, alesă de comun acord.',
     ],
   },
 ];

@@ -4,7 +4,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="section mb-24 lg:mb-0">
+    <section className="section mb-60 lg:mb-0">
       <div className="container mx-auto h-full relative max-w-full lg:max-w-7xl">
         {/* Titlul "About me" deasupra imaginii și textului */}
         <div className="mt-20 ">
@@ -27,23 +27,41 @@ function About() {
 
             <div className="flex-1 pb-14 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
               <p className="mb-8 max-w-sm">
-                Sunt Patrik, un <b>povestitor vizual</b> ce transformă fiecare
-                moment prețios într-o poveste nemuritoare. Fie că este vorba
-                despre o nuntă plină de iubire, un botez al bucuriei, o
-                petrecere a râsetelor sau o întâlnire de familie călduroasă,
-                scopul meu este să surprind frumusețea, dragostea și emoțiile
-                autentice.
+                Pasiunea mea pentru fotografie a început <b>acum 7 ani</b>, când
+                mi-am achiziționat primul aparat foto semi-profesionist. De
+                atunci, am transformat această pasiune într-o carieră și mă
+                concentrez pe capturarea momentelor speciale din cadrul
+                evenimentelor sociale, absolvirilor și ședințelor foto.
               </p>
-              <p className="mb-12 max-w-sm">
-                Fiecare <b>imagine</b> reflectă pasiunea mea pentru fotografie
-                și angajamentul de a captura momentele importante cu
-                sensibilitate.
+              <p className=" max-w-sm">
+                Cred cu tărie că fiecare eveniment este unic, iar misiunea mea
+                este să surprind autenticitatea și emoția fiecărei clipe, nu să
+                o regizez. Fiecare proiect reprezintă o oportunitate de a aduce
+                mai multă valoare și de a îmbunătăți constant calitatea muncii
+                mele.
               </p>
-              <Link href={"/portfolio"} className="btn">
-                View my work →
-              </Link>
             </div>
           </div>
+
+          {/* Cele două paragrafe sub imagine, în coloane */}
+          <div className="flex flex-col lg:flex-row justify-between gap-4">
+            <p className="mb-12 lg:w-1/2">
+              Îmi place să interacționez cu oameni noi și să lucrez în situații
+              care pot părea stresante. De fapt, mă simt cel mai creativ atunci
+              când sunt sub presiune. Am avut ocazia să colaborez cu sute de
+              persoane, iar ceea ce îmi doresc cel mai mult este să le ofer
+              amintiri autentice.
+            </p>
+
+            <p className="mb-12 lg:w-1/2">
+              Dacă ești în căutarea unui fotograf care să surprindă momentele
+              tale importante cu dedicare și profesionalism, sunt aici să
+              relaționăm și să lucrăm împreună!
+            </p>
+          </div>
+          {/* <Link href={"/portfolio"} className="btn">
+            View my work →
+          </Link> */}
         </div>
       </div>
     </section>

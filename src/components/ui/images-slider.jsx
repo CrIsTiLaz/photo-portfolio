@@ -2,6 +2,8 @@
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const ImagesSlider = ({
   images,
@@ -10,7 +12,7 @@ export const ImagesSlider = ({
   overlayClassName,
   className,
   autoplay = true,
-  direction = "up"
+  direction = "up",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -18,12 +20,14 @@ export const ImagesSlider = ({
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === images.length ? 0 : prevIndex + 1);
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
   };
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1);
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   useEffect(() => {
@@ -48,17 +52,8 @@ export const ImagesSlider = ({
       })
       .catch((error) => console.error("Failed to load images", error));
   };
+
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "ArrowRight") {
-        handleNext();
-      } else if (event.key === "ArrowLeft") {
-        handlePrevious();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
     // autoplay
     let interval;
     if (autoplay) {
@@ -68,7 +63,6 @@ export const ImagesSlider = ({
     }
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
       clearInterval(interval);
     };
   }, []);
@@ -107,17 +101,18 @@ export const ImagesSlider = ({
   const areImagesLoaded = loadedImages.length > 0;
 
   return (
-    (<div
+    <div
       className={cn(
         "overflow-hidden h-full w-full relative flex items-center justify-center",
         className
       )}
       style={{
         perspective: "1000px",
-      }}>
+      }}
+    >
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
-        <div className={cn("absolute inset-0 bg-black/60 z-40", overlayClassName)} />
+        <div className={cn("absolute inset-0  z-40", overlayClassName)} />
       )}
       {areImagesLoaded && (
         <AnimatePresence>
@@ -128,9 +123,43 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover object-center" />
+            className="image h-full w-full absolute inset-0 object-cover object-center"
+          />
         </AnimatePresence>
       )}
-    </div>)
+
+      {/* Săgeata din stânga */}
+      {/* <button
+        onClick={handlePrevious}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
+      >
+        &#9664; {/* Săgeată stânga */}
+      {/* </button> */}
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
+        onClick={handlePrevious}
+      >
+        <ChevronLeft className="h-4 w-4" />
+        <span className="sr-only">Înapoi</span>
+      </Button>
+      {/* Săgeata din dreapta */}
+      {/* <button
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
+      >
+        &#9654; {/* Săgeată dreapta */}
+      {/* </button>  */}
+      <Button
+        variant="outline"
+        size="icon"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
+        onClick={handleNext}
+      >
+        <ChevronRight className="h-4 w-4" />
+        <span className="sr-only">Înainte</span>
+      </Button>
+    </div>
   );
 };
