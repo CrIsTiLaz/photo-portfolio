@@ -27,16 +27,16 @@ export function ImagesSliderDemo() {
         }}
         className="z-50 flex flex-col justify-start "
       >
-        <motion.p className="font-bold text-4xl md:text-5xl lg:text-6xl text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+        <motion.p className="font-extrabold text-4xl md:text-5xl lg:text-6xl text-left text-white py-4">
           Fotograf & <br /> povestitor vizual
         </motion.p>
 
-        <Link className="justify-center text-center" href={"/contact"}>
+        {/* <Link className="justify-center text-center" href={"/contact"}>
           <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
             <span>Contact →</span>
             <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
           </button>
-        </Link>
+        </Link> */}
       </motion.div>
     </ImagesSlider>
   );

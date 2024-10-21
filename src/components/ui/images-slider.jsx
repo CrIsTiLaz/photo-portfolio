@@ -138,23 +138,17 @@ export const ImagesSlider = ({
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
+        className="absolute left-4 sm:top-1/2 bottom-12 sm:transform sm:-translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
         onClick={handlePrevious}
       >
         <ChevronLeft className="h-4 w-4" />
         <span className="sr-only">Înapoi</span>
       </Button>
-      {/* Săgeata din dreapta */}
-      {/* <button
-        onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
-      >
-        &#9654; {/* Săgeată dreapta */}
-      {/* </button>  */}
+
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
+        className="absolute right-4 sm:top-1/2 bottom-12 sm:transform sm:-translate-y-1/2 z-50 bg-white p-2 rounded-full shadow-lg"
         onClick={handleNext}
       >
         <ChevronRight className="h-4 w-4" />
