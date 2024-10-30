@@ -47,7 +47,7 @@ function Header() {
           Patrik
         </Link>
 
-        <nav className="hidden lg:flex gap-x-12  font-bold">
+        <nav className="hidden lg:flex gap-x-12 font-bold">
           <Link href="/" className="hover:text-primary transition">
             Home
           </Link>
@@ -66,25 +66,25 @@ function Header() {
               <DropdownMenuContent className={"font-primary"}>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/nunti">Wedding</Link>
+                  <Link href="/portfolio/nunta">Wedding</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/nunti">Baptism</Link>
+                  <Link href="/portfolio/botez">Baptism</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3">Absolventi</Link>
+                  <Link href="/portfolio/absolventi">Absolventi</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3">Lifestyle</Link>
+                  <Link href="/portfolio/lifestyle">Lifestyle</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3">Nightlife</Link>
+                  <Link href="/portfolio/nightlife">Nightlife</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3">Fitness</Link>
+                  <Link href="/portfolio/fitness">Fitness</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3">Majorate</Link>
+                  <Link href="/portfolio/majorat">Majorate</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="font-bold">
                   <Link href="/portfolio">Toate categoriile</Link>
