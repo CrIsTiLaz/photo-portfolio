@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,6 +8,7 @@ import {
   AiFillFacebook,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const socialLinks = [
   {
@@ -60,9 +63,24 @@ const quickLinks03 = [
 ];
 
 function Footer() {
+  const pathname = usePathname();
+
+  // Ascunde footer-ul pe ruta specifică "/portfolio/nunti"
+  if (pathname === "/portfolio/nunti") {
+    return null;
+  }
+
   const year = new Date().getFullYear();
   return (
-    <footer className=" text-primary py-12">
+    <footer className="text-primary py-12">
+      <hr
+        style={{
+          border: "none",
+          borderTop: "1px solid #e0e0e0",
+          marginBottom: 20,
+          padding: 0,
+        }}
+      />
       <div className="container mx-auto px-4 lg:px-16">
         <div className="flex justify-between flex-col md:flex-row flex-wrap gap-8">
           {/* Logo and Copyright */}

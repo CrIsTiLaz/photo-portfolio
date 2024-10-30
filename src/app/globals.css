@@ -127,3 +127,17 @@
     }
       
 }
+
+/* CSS pentru grila Masonry */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -16px; /* Spațiu între coloane */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 16px; /* Spațiu între coloane */
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > div {
+  margin-bottom: 16px;
+}

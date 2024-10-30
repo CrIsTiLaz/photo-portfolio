@@ -10,6 +10,7 @@ const nextConfig = {
       "images.unsplash.com",
       "assets.aceternity.com", // Microlink Image Preview
       "res.cloudinary.com",
+      "patrikportfolio.fra1.digitaloceanspaces.com",
     ],
   },
 };
