@@ -6,9 +6,19 @@ import Image from "next/image";
 import Masonry from "react-masonry-css";
 import { X } from "lucide-react";
 
-// Componenta Skeleton
-const Skeleton = () => (
-  <div className="w-full h-64 bg-gray-300 rounded-lg animate-pulse"></div>
+// Skeleton pentru imaginile din grilă (la scroll)
+const SkeletonGrid = () => (
+  <div className="bg-gray-300 rounded-lg animate-pulse w-full h-[300px]"></div>
+);
+
+// Skeleton pentru imaginea mărită (fullscreen)
+const SkeletonFullScreen = () => (
+  <div className="flex items-center justify-center fixed inset-0 z-50 bg-black bg-opacity-70">
+    <div
+      className="bg-gray-300 rounded-lg animate-pulse"
+      style={{ width: "800px", height: "600px" }}
+    ></div>
+  </div>
 );
 
 export default function ImageGridViewer() {
@@ -105,8 +115,8 @@ export default function ImageGridViewer() {
           Array(8)
             .fill(0)
             .map((_, index) => (
-              <div key={`skeleton-${index}`} className="cursor-pointer">
-                <Skeleton />
+              <div key={`skeleton-grid-${index}`} className="cursor-pointer">
+                <SkeletonGrid />
               </div>
             ))}
       </Masonry>
@@ -124,7 +134,8 @@ export default function ImageGridViewer() {
             <X size={32} />
           </button>
 
-          {loading && <Skeleton />}
+          {/* Skeleton pentru imaginea mărită */}
+          {loading && <SkeletonFullScreen />}
 
           <Image
             key={selectedImage}
