@@ -14,13 +14,14 @@ import Image from "next/image";
 export function BentoGridSecondDemo() {
   return (
     <div className="">
-      <BentoGrid className="w-[90%]  md:auto-rows-[30rem] mx-auto ">
+      <BentoGrid className="w-[90%] md:auto-rows-[30rem] mx-auto ">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
             header={item.header}
             icon={item.icon}
+            path={`/portfolio/${item.title.toLowerCase()}`} // Generăm ruta dinamică
             className={i === 3 || i === 6 ? "md:col-span-2" : ""}
           />
         ))}
@@ -31,11 +32,11 @@ export function BentoGridSecondDemo() {
 
 const items = [
   {
-    title: "Wedding",
+    title: "Nunti",
     description: "Explore the birth of groundbreaking ideas and inventions.",
     header: (
       <Image
-        src="/nunta/nunta1.jpg" // Înlocuiește cu calea reală către imaginea ta
+        src="/portfolio/nunta.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Dawn of Innovation"
         width={300}
         height={300}
@@ -52,11 +53,11 @@ const items = [
     ),
   },
   {
-    title: "Baptism",
+    title: "Botezuri",
     description: "Dive into the transformative power of technology.",
     header: (
       <Image
-        src="/sala/gym2.jpg" // Înlocuiește cu calea reală către imaginea ta
+        src="/portfolio/botez.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Digital Revolution"
         width={400}
         height={200}
@@ -90,7 +91,7 @@ const items = [
       "Understand the impact of effective communication in our lives.",
     header: (
       <Image
-        src="/majorat.jpg" // Înlocuiește cu calea reală către imaginea ta
+        src="/portfolio/lifestyle.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Power of Communication"
         width={400}
         height={200}
@@ -106,7 +107,7 @@ const items = [
     description: "Join the quest for understanding and enlightenment.",
     header: (
       <Image
-        src="/nightlife.jpg" // Înlocuiește cu calea reală către imaginea ta
+        src="/portfolio/nightlife.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Pursuit of Knowledge"
         width={400}
         height={200}
@@ -120,7 +121,7 @@ const items = [
     description: "Experience the thrill of bringing ideas to life.",
     header: (
       <Image
-        src="/sala/gym1.jpg" // Înlocuiește cu calea reală către imaginea ta
+        src="/portfolio/gym.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Joy of Creation"
         width={400}
         height={200}
@@ -134,7 +135,7 @@ const items = [
     description: "Embark on exciting journeys and thrilling discoveries.",
     header: (
       <Image
-        src="/majorat.jpg" // Înlocuiește cu calea reală către imaginea ta
+        src="/portfolio/majorat.jpg" // Înlocuiește cu calea reală către imaginea ta
         alt="The Spirit of Adventure"
         width={400}
         height={200}

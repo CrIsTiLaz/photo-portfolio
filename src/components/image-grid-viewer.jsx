@@ -20,7 +20,7 @@ export function ImageGridViewer() {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch(`/api/pictures?folder=nunta&page=${page}`);
+      const response = await fetch(`/api/pictures?folder=nunti&page=${page}`);
       if (!response.ok)
         throw new Error(`HTTP error! status: ${response.status}`);
       const data = await response.json();

@@ -66,10 +66,10 @@ function Header() {
               <DropdownMenuContent className={"font-primary"}>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/nunta">Wedding</Link>
+                  <Link href="/portfolio/nunti">Nunti</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/botez">Baptism</Link>
+                  <Link href="/portfolio/botezuri">Botezuri</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/portfolio/absolventi">Absolventi</Link>
@@ -84,7 +84,7 @@ function Header() {
                   <Link href="/portfolio/fitness">Fitness</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/majorat">Majorate</Link>
+                  <Link href="/portfolio/majorate">Majorate</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="font-bold">
                   <Link href="/portfolio">Toate categoriile</Link>

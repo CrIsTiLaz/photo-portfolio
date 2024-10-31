@@ -59,9 +59,6 @@ function About() {
               relaționăm și să lucrăm împreună!
             </p>
           </div>
-          {/* <Link href={"/portfolio"} className="btn">
-            View my work →
-          </Link> */}
         </div>
       </div>
     </section>

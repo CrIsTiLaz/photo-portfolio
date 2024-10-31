@@ -23,7 +23,25 @@ export async function GET(request) {
     Bucket: "patrikportfolio",
     Prefix: `${folderName}/`,
   };
+  console.log("Requested folder:", folderName);
 
+  if (
+    !folderName ||
+    ![
+      "absolventi",
+      "botezuri",
+      "fitness",
+      "lifestyle",
+      "majorate",
+      "nightlife",
+      "nunti",
+    ].includes(folderName)
+  ) {
+    return NextResponse.json(
+      { error: "Invalid or missing folder name." },
+      { status: 400 }
+    );
+  }
   try {
     const command = new ListObjectsV2Command(params);
     const data = await s3.send(command);

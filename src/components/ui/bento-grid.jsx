@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
-import Link from "next/link"; // Import Link for navigation
-import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ export const BentoGrid = ({ className, children }) => {
   );
 };
 
-export const BentoGridItem = ({ className, title, header, icon }) => {
+export const BentoGridItem = ({ className, title, header, icon, path }) => {
   return (
     <div
       className={cn(
@@ -40,7 +40,9 @@ export const BentoGridItem = ({ className, title, header, icon }) => {
           <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200">
             {title}
           </div>
-          <Link href={"/portfolio/nunti"}>
+          <Link href={path}>
+            {" "}
+            {/* Folosim path-ul dinamic */}
             <Button>
               Vezi mai multe{" "}
               <AiOutlineArrowRight color="white" className="ml-2" />
