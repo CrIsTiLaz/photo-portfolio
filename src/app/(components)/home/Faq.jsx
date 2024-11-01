@@ -72,7 +72,7 @@ const faqData = [
 function Faq() {
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <h1 className="h2 text-center mb-16 mt-10 lg:mt-6">
+      <h1 className="h2 text-center mb-16 mt-10 lg:mt-16">
         Întrebări frecvente
       </h1>
 

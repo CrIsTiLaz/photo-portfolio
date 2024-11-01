@@ -18,9 +18,9 @@ export default function Home() {
       <div>
         <ImagesSliderDemo />
         <About />
-        <Faq />
-        <Testimonial />
         <Oferte />
+        <Testimonial />
+        <Faq />
       </div>
     </>
   );

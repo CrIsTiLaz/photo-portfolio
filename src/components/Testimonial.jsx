@@ -6,7 +6,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 export function Testimonial() {
   return (
     <div>
-      <h1 className="h2 text-center mt-28 mb-12">Testimoniale</h1>
+      <h1 className="h2 text-center mt-16 mb-12">Testimoniale</h1>
 
       <div className=" h-[40rem] gap-10 rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards
@@ -28,7 +28,7 @@ export function Testimonial() {
 const testimonials = [
   {
     quote:
-      "“Am colaborat cu Patrik pentru un proiect foto-video și am fost extrem de mulțumit de rezultat. Profesionalismul și creativitatea au transformat fiecare moment într-o operă de artă, capturând emoțiile și detaliile într-un mod impecabil. Procesul de lucru a fost eficient, iar comunicarea excelentă pe toată durata proiectului. Recomand cu încredere pentru oricine caută servicii de top!”",
+      "“Am colaborat cu Patrik pentru un proiect foto-video și am fost extrem de mulțumit de rezultat. Profesionalismul și creativitatea au transformat fiecare moment într-o operă de artă. Recomand cu încredere pentru servicii de top!”",
     name: "Sebastian Lupu",
     title: "Frizer",
   },

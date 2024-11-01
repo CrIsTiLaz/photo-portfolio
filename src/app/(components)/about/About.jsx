@@ -4,8 +4,8 @@ import React from "react";
 
 function About() {
   return (
-    <section className="section mb-60 lg:mb-0">
-      <div className="container mx-auto h-full relative max-w-full lg:max-w-7xl">
+    <section className=" lg:mb-0">
+      <div className="container  h-full relative max-w-full lg:max-w-7xl">
         {/* Titlul "About me" deasupra imaginii și textului */}
         <div className="mt-20 ">
           <h1 className="h1 text-left mb-16">About me</h1>

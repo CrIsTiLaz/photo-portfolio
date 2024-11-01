@@ -3,6 +3,7 @@ import React from "react";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { useId } from "react";
+import GetStartedButton from "@/components/ui/button-cool";
 
 export function Oferte() {
   return (
@@ -121,10 +122,17 @@ export function Oferte() {
           </div>
         ))}
       </div>
-      <p className="text-left  px-4 lg:px-24  text-neutral-600 dark:text-neutral-400 mt-8">
-        * Prețurile afișate nu includ costuri suplimentare de transport sau
-        cazare, care vor fi acoperite de dvs.
-      </p>
+      <div className="mt-8 px-4 lg:px-24">
+        <p className="text-left text-neutral-600 dark:text-neutral-400">
+          * Prețurile afișate nu includ costuri suplimentare de transport sau
+          cazare, care vor fi acoperite de dvs.
+        </p>
+        <div className="mt-4 flex justify-center">
+          <a href="/oferta_albume_2025.pdf" download className="btn sm:w-fit">
+            Descarcă oferta de albume
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
