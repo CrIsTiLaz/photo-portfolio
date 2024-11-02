@@ -34,17 +34,13 @@ function MobileNav() {
     setOpenMenu(false);
   };
 
-  const handleDropdownOpenChange = (open) => {
-    setDropdownOpen(open);
+  const handleDropdownClose = () => {
+    setDropdownOpen(false);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,7 +51,7 @@ function MobileNav() {
     <nav className="text-primary xl:hidden">
       <div
         onClick={() => setOpenMenu(true)}
-        className={`text-3xl cursor-pointer `}
+        className="text-3xl cursor-pointer"
       >
         <CgMenuRightAlt />
       </div>
@@ -72,6 +68,7 @@ function MobileNav() {
         >
           <FaTimes />
         </div>
+
         <ul className="h-full flex flex-col pt-36 items-center gap-y-16 text-primary font-primary font-bold text-3xl">
           <li>
             <Link href="/" onClick={handleMenuClose}>
@@ -80,7 +77,7 @@ function MobileNav() {
           </li>
 
           <li>
-            <DropdownMenu onOpenChange={handleDropdownOpenChange}>
+            <DropdownMenu onOpenChange={(open) => setDropdownOpen(open)}>
               <DropdownMenuTrigger className="cursor-pointer flex items-center">
                 Portfolio
                 <AiFillCaretDown
@@ -90,43 +87,29 @@ function MobileNav() {
                 />
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className={"font-primary"}>
+              <DropdownMenuContent className="font-primary">
                 <DropdownMenuSeparator />
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/nunti" onClick={handleMenuClose}>
-                    Wedding
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/nunti" onClick={handleMenuClose}>
-                    Baptism
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
-                    Absolventi
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
-                    Lifestyle
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
-                    Nightlife
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
-                    Fitness
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/portfolio/page3" onClick={handleMenuClose}>
-                    Majorate
-                  </Link>
-                </DropdownMenuItem>
+                {[
+                  { url: "nunti", label: "Nunți" },
+                  { url: "botezuri", label: "Botezuri" },
+                  { url: "absolventi", label: "Absolvenți" },
+                  { url: "lifestyle", label: "Lifestyle" },
+                  { url: "nightlife", label: "Nightlife" },
+                  { url: "fitness", label: "Fitness" },
+                  { url: "majorate", label: "Majorate" },
+                ].map(({ url, label }) => (
+                  <DropdownMenuItem key={url} asChild>
+                    <Link
+                      href={`/portfolio/${url}`}
+                      onClick={() => {
+                        handleMenuClose();
+                        handleDropdownClose();
+                      }}
+                    >
+                      {label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
                 <DropdownMenuItem asChild className="font-bold">
                   <Link href="/portfolio" onClick={handleMenuClose}>
                     Toate categoriile

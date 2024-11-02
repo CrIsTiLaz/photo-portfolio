@@ -11,12 +11,14 @@ import { HoverBorderGradientDemo } from "@/components/HoverBorder";
 import { Oferte } from "@/components/ui/Oferte";
 import About from "./(components)/about/About";
 import Faq from "./(components)/home/Faq";
+import Albume from "./(components)/home/Albume";
 
 export default function Home() {
   return (
     <>
       <div>
         <ImagesSliderDemo />
+        <Albume />
         <About />
         <Oferte />
         <Testimonial />

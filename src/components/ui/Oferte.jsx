@@ -127,11 +127,6 @@ export function Oferte() {
           * Prețurile afișate nu includ costuri suplimentare de transport sau
           cazare, care vor fi acoperite de dvs.
         </p>
-        <div className="mt-4 flex justify-center">
-          <a href="/oferta_albume_2025.pdf" download className="btn sm:w-fit">
-            Descarcă oferta de albume
-          </a>
-        </div>
       </div>
     </div>
   );

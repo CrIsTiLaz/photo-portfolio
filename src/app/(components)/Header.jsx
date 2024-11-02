@@ -63,16 +63,16 @@ function Header() {
                 />
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className={"font-primary"}>
+              <DropdownMenuContent className="font-primary">
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/nunti">Nunti</Link>
+                  <Link href="/portfolio/nunti">Nunți</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/portfolio/botezuri">Botezuri</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/portfolio/absolventi">Absolventi</Link>
+                  <Link href="/portfolio/absolventi">Absolvenți</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/portfolio/lifestyle">Lifestyle</Link>
