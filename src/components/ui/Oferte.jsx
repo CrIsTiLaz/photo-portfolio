@@ -45,30 +45,6 @@ export function Oferte() {
                         <span className="text-left flex-1">{service}</span>
                       </li>
                     ))}
-                    <li className="mt-4 font-bold">
-                      Servicii extra disponibile:
-                    </li>
-
-                    <li className="flex items-start mb-4">
-                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
-                      <span className="text-left flex-1">
-                        Cununie civilă - 400 euro
-                      </span>
-                    </li>
-
-                    <li className="flex items-start mb-4">
-                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
-                      <span className="text-left flex-1">
-                        Second shooter - 300 euro
-                      </span>
-                    </li>
-
-                    <li className="flex items-start mb-4">
-                      <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
-                      <span className="text-left flex-1">
-                        Albume foto - preț la cerere
-                      </span>
-                    </li>
                   </ul>
                 </div>
               </BackgroundGradient>
@@ -91,25 +67,30 @@ export function Oferte() {
                       <span className="text-left flex-1">{service}</span>
                     </li>
                   ))}
+                </ul>
+              </div>
+            )}
 
-                  <li className="mt-4 font-bold">
-                    Servicii extra disponibile:
-                  </li>
-
+            {/* Render "Servicii extra disponibile" below "Pachetul 2" */}
+            {feature.title === "Pachetul 2" && (
+              <div className="relative p-6 rounded-3xl overflow-hidden bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white mt-8">
+                <Grid size={20} />
+                <p className="text-lg text-center font-bold text-neutral-800 dark:text-white mb-4 relative z-10">
+                  Servicii extra disponibile:
+                </p>
+                <ul className="text-neutral-600 dark:text-neutral-400 mt-4 text-base font-normal relative z-10">
                   <li className="flex items-start mb-4">
                     <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
                     <span className="text-left flex-1">
                       Cununie civilă - 400 euro
                     </span>
                   </li>
-
                   <li className="flex items-start mb-4">
                     <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
                     <span className="text-left flex-1">
                       Second shooter - 300 euro
                     </span>
                   </li>
-
                   <li className="flex items-start mb-4">
                     <AiFillCheckCircle className="text-2xl mr-2 mt-1" />
                     <span className="text-left flex-1">
@@ -122,6 +103,7 @@ export function Oferte() {
           </div>
         ))}
       </div>
+
       <div className="mt-8 px-4 lg:px-24">
         <p className="text-left text-neutral-600 dark:text-neutral-400">
           * Prețurile afișate nu includ costuri suplimentare de transport sau
@@ -135,7 +117,7 @@ export function Oferte() {
 const grid = [
   {
     title: "Pachetul 1",
-    price: "800€",
+    price: "1000€",
     services: [
       " Prezența unui fotograf alături de voi pe toată durata evenimentului, surprinzând cele mai frumoase momente de la cununia civilă, pregătirea mirilor, cununia religioasă, cat si petrecerea de la sala de evenimente, inclusiv după sosirea tortului.",
       " Veti primi minim 700 de fotografii editate profesional (numărul poate crește in funcție de dinamica evenimentului), disponibile spre descărcare la calitate maxima.",
@@ -145,7 +127,7 @@ const grid = [
   },
   {
     title: "Pachetul 2",
-    price: "1100€",
+    price: "1250€",
     services: [
       " Include tot ce include pachetul 1.",
       ' Ședință foto "Save the date", stabilită de comun acord la rezervarea pachetului. ',
@@ -153,7 +135,7 @@ const grid = [
   },
   {
     title: "Pachetul 3",
-    price: "1300€",
+    price: "1600€",
     services: [
       " Include tot ce include pachetul 2. ",
       ' Ședință foto "Trash the dress", care se va face după eveniment, într-o locație diferita de locația petrecerii, alesă de comun acord.',
