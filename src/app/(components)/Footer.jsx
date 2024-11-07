@@ -12,15 +12,11 @@ import { usePathname } from "next/navigation";
 
 const socialLinks = [
   {
-    path: "https://www.youtube.com/",
-    icon: <AiOutlineYoutube className="group-hover:text-white w-6 h-6" />,
-  },
-  {
-    path: "https://www.facebook.com",
+    path: "https://www.facebook.com/people/Stoian-Patrik-Fotograf/100089083395152/?mibextid=LQQJ4d&rdid=GiqoOPT5mghcBGSZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DrG9dX9Sb%2F%3Fmibextid%3DLQQJ4d",
     icon: <AiFillFacebook className="group-hover:text-white w-6 h-6" />,
   },
   {
-    path: "https://www.instagram.com/",
+    path: "https://www.instagram.com/patrik_stoian_fotograf/",
     icon: <AiOutlineInstagram className="group-hover:text-white w-6 h-6" />,
   },
 ];

@@ -44,7 +44,7 @@ function Header() {
     >
       <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
         <Link href="/" className="max-w-[200px] font-extrabold">
-          Patrik
+          P.S
         </Link>
 
         <nav className="hidden lg:flex gap-x-12 font-bold">
