@@ -13,6 +13,49 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Stoian Patrik - Fotograf Profesional",
+    url: "https://stoianpatrik.ro/",
+    description:
+      "Salut! Sunt Stoian Patrik, un fotograf pasionat de capturarea momentelor speciale. Explorează portofoliul meu pentru a descoperi lumea prin obiectivul meu.",
+    author: {
+      "@type": "Person",
+      name: "Stoian Patrik",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://stoianpatrik.ro/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+    // Breadcrumb pentru structură
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Acasă",
+          item: "https://stoianpatrik.ro/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Portofoliu",
+          item: "https://stoianpatrik.ro/portfolio",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Contact",
+          item: "https://stoianpatrik.ro/contact",
+        },
+        // Poți adăuga mai multe linkuri pentru alte categorii de portofoliu, de exemplu, Botezuri, Lifestyle, etc.
+      ],
+    },
+  };
+
   return (
     <html lang="ro">
       <head>
@@ -37,6 +80,11 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content="https://stoianpatrik.ro/" />
         <meta property="og:type" content="website" />
 
+        {/* JSON-LD Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
         <title>Stoian Patrik - Fotograf Profesional</title>
       </head>
       <body className={inter.className}>
